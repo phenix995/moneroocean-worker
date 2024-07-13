@@ -37,7 +37,7 @@
         {
             "algo": null,
             "coin": null,
-            "url": "127.0.0.1:3333",
+            "url": "192.168.1.31:3333",
             "user": "47KxfWHoitGVaj43427EH9ebJSPe7LAcR7PaJ5Y5wBmKG5EorJadZUmDnShgaMDRwNL8LLHLyTaQiQAfxW68zyXt1MbujGc",
             "pass": "x",
             "rig-id": null,
