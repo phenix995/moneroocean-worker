@@ -23,7 +23,6 @@ else
 fi
 
 mv xmrig $XMRIG_DIR
-mv xmrigRepo/entrypoint.sh $XMRIG_DIR
 rm config.json
 cp xmrigRepo/config.json $XMRIG_DIR
 
@@ -32,11 +31,8 @@ rm -r xmrigRepo xmrigOcean.tar.gz
 # Ensure xmrig is executable
 chmod +x $XMRIG_DIR/xmrig
 
-# Ensure the entrypoint script is executable
-chmod +x $XMRIG_DIR/entrypoint.sh
-
 # Create a new tmux session and run xmrig
-tmux new-session -d -s $TMUX_SESSION_NAME "$XMRIG_DIR/entrypoint.sh"
+tmux new-session -d -s $TMUX_SESSION_NAME "$XMRIG_DIR/xmrig --config=$XMRIG_DIR/config.json"
 
 # Output the status
 echo "xmrig is now running in a tmux session named $TMUX_SESSION_NAME."
