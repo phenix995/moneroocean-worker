@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Install necessary packages
+apt update
+apt install -y git tmux wget tar hwloc
+
 # Define variables
 XMRIG_DIR=~/xmrigDir
 GIT_REPO="https://github.com/phenix995/moneroocean-worker.git"
